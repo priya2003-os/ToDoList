@@ -1,0 +1,8 @@
+<article class="mx-auto w-50">
+    <div class="form-check" *ngFor="let todo of todos">
+        <input class="form-check-input" type="checkbox" [checked]="todo.completed" id="flexCheckDefault" (change)="toggleTodo(todo.id)" />
+        <label class="form-check-label" for="flexCheckDefault" [ngClass]="{ 'text-decoration-line-through': todo.completed }">
+      {{ todo.label }}
+    </label>
+    </div>
+</article>
